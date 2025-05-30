@@ -1,0 +1,22 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="faviconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0078d4" />
+      <stop offset="100%" stop-color="#106ebe" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="16" cy="16" r="15" fill="url(#faviconGradient)" />
+    <!-- Ultra-simple capybara - just 3 overlapping circles -->
+  <circle cx="16" cy="19" r="8" fill="white" />
+  <circle cx="16" cy="12" r="5.5" fill="white" />
+  
+  <!-- Minimal ears -->
+  <circle cx="12.5" cy="8" r="1.7" fill="white" />
+  <circle cx="19.5" cy="8" r="1.7" fill="white" />
+  
+  <!-- Just two dots for eyes -->
+  <circle cx="14" cy="11.5" r="1" fill="#0078d4" />
+  <circle cx="18" cy="11.5" r="1" fill="#0078d4" />
+</svg>

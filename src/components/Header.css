@@ -1,0 +1,237 @@
+.header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.dark .header {
+  background: rgba(26, 26, 26, 0.95);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.logo:hover {
+  transform: scale(1.02);
+}
+
+.logo-icon {
+  transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-icon {
+  transform: rotate(5deg);
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  margin: 0;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--text-tertiary);
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav a:hover {
+  color: var(--accent-primary);
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-primary);
+  transition: width 0.3s ease;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-actions .btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.theme-toggle {
+  background: none;
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--text-secondary);
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  transform: scale(1.05);
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-tertiary);
+  padding: 8px;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    padding: 0.75rem 0;
+  }
+  
+  .nav {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg-primary);
+    flex-direction: column;
+    padding: 2rem;
+    box-shadow: 0 4px 6px var(--shadow-medium);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    border-top: 1px solid var(--border-color);
+  }
+  
+  .nav-open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .nav a {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  
+  .nav a:last-child {
+    border-bottom: none;
+  }
+  
+  .mobile-menu-btn {
+    display: block;
+  }
+  
+  .header-actions {
+    gap: 0.5rem;
+  }
+  
+  .header-actions .btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }  /* Logo Mobile Optimizations */
+  .logo {
+    gap: 10px;
+  }
+  
+  .logo-text {
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+  
+  .logo-icon {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+  }
+  
+  .theme-toggle {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+  .header-content {
+    padding: 0.5rem 0;
+  }  .logo {
+    gap: 8px;
+  }
+  
+  .logo-text {
+    font-size: 1.1rem;
+  }
+  
+  .logo-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .header-actions {
+    gap: 0.25rem;
+  }
+  
+  .header-actions .btn {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+  
+  .header-actions .btn span {
+    display: none; /* Hide button text on very small screens */
+  }
+  
+  .theme-toggle {
+    width: 32px;
+    height: 32px;
+  }
+}

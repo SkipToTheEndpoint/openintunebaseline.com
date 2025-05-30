@@ -1,0 +1,34 @@
+{
+  "name": "openintunebaseline.com",
+  "version": "1.0.0",
+  "description": "Official website for the OpenIntuneBaseline project - Community-driven endpoint security for Microsoft Intune.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "keywords": [
+    "OpenIntuneBaseline",
+    "Microsoft Intune",
+    "Intune",
+    "Security Baseline",
+    "Endpoint Security",
+    "community-driven",
+    "react",
+    "vite"
+  ],
+  "author": "James Robinson",
+  "license": "MIT",
+  "dependencies": {
+    "lucide-react": "^0.263.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.5.0",
+    "gh-pages": "^6.3.0",
+    "vite": "^6.3.5"
+  }
+}
