@@ -13,5 +13,30 @@
     "id": 3,
     "title": "Senior EUC Consultant @ Large MSP",
     "comment": "I can easily recommend these policies to my customers as a baseline. They are easy to implement and provide a good starting point while maintaining a balance between security and user experience.\n\nOverall, they're great!"
+  },
+  {
+    "id": 4,
+    "title": "Head of Cloud Strategy",
+    "comment": "The quickest route to becoming more secure than what any other framework provides, without sacrificing productivity or usability."
+  },
+  {
+    "id": 5,
+    "title": "Cyber Automation Architect @ MSSP",
+    "comment": "OpenIntuneBaseline gave me a solid platform to build from for my endpoints. The project is clearly made by someone who understands Intune extremely well and the policy design is clearly laid out. Not only does it cover security measures, it also adds user experience policies too (especially Edge policies - which makes transition of Chrome much smoother)."
+  },
+  {
+    "id": 6,
+    "title": "Endpoint Architect @ Energy Firm",
+    "comment": "This is so helpful and saves tons of hours. Really a big help!"
+  },
+  {
+    "id": 7,
+    "title": "Senior Solutions Architect",
+    "comment": "As an IT consultant, every time I have engaged with the customers to secure their devices I use OIB."
+  },
+  {
+    "id": 8,
+    "title": "Tech Lead Modern Workspace @ IT Solutions Provider",
+    "comment": "The best policies and we used it for our baselines!"
   }
 ]
