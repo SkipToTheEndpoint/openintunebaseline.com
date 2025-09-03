@@ -91,16 +91,7 @@ const About = () => {
                 className="btn btn-primary"
               >
                 <Github size={18} />
-                View on GitHub
-              </a>
-              <a 
-                href="https://github.com/SkipToTheEndpoint/OpenIntuneBaseline/blob/main/README.md"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-secondary"
-              >
-                <ExternalLink size={18} />
-                Documentation
+                Learn more on GitHub
               </a>
             </div>
           </div>

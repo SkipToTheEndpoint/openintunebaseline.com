@@ -1,5 +1,5 @@
 import React from 'react'
-import { Shield, Users, Download, ExternalLink, UserCheck, PackageOpen, Brain } from 'lucide-react'
+import { Shield, Users, Download, ExternalLink, UserCheck, PackageOpen, Brain, Github } from 'lucide-react'
 import './Hero.css'
 
 const Hero = () => {
@@ -19,18 +19,21 @@ const Hero = () => {
             </p>
             <div className="hero-actions">
               <a 
-                href="https://github.com/SkipToTheEndpoint/OpenIntuneBaseline"
+                href="https://deploy.openintunebaseline.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary"
               >
                 <Download size={18} />
-                Get Started
+                Deploy Now
               </a>
               <a 
-                href="#features"
+                href="https://github.com/SkipToTheEndpoint/OpenIntuneBaseline"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn btn-secondary"
               >
+                <Github size={18} />
                 Learn More
               </a>
             </div>

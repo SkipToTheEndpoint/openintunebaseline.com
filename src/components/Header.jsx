@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Menu, X, Github, Moon, Sun } from 'lucide-react'
+import { Menu, X, Github, Moon, Sun, Import } from 'lucide-react'
 import Logo from './Logo'
 import './Header.css'
 
@@ -76,13 +76,13 @@ const Header = () => {
               {isDarkMode ? <Sun size={18} /> : <Moon size={18} />}
             </button>
             <a 
-              href="https://github.com/SkipToTheEndpoint/OpenIntuneBaseline"
+              href="https://deploy.openintunebaseline.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-secondary"
             >
-              <Github size={18} />
-              GitHub
+              <Import size={18} />
+              Deploy
             </a>
           </div>
           
