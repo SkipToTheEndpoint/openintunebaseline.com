@@ -1,5 +1,5 @@
 import React from 'react'
-import { Shield, Users, Download, ExternalLink, UserCheck, PackageOpen, Brain, Github } from 'lucide-react'
+import { Shield, Download, Github } from 'lucide-react'
 import './Hero.css'
 
 const Hero = () => {

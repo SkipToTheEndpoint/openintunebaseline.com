@@ -1,55 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useEffect, useState } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import testimonialsData from '../data/testimonials.json'
 import './Testimonials.css'
 
 const TestimonialsSection = () => {
-  const [testimonials, setTestimonials] = useState([])
+  const testimonials = testimonialsData
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [isLoading, setIsLoading] = useState(false)
-  const [hasLoaded, setHasLoaded] = useState(false)
-  const sectionRef = useRef(null)
-
-  // Lazy loading with Intersection Observer
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const [entry] = entries
-        if (entry.isIntersecting && !hasLoaded) {
-          setHasLoaded(true)
-          setIsLoading(true)
-          fetchTestimonials()
-        }
-      },
-      {
-        threshold: 0.1, // Trigger when 10% of the section is visible
-        rootMargin: '50px' // Start loading 50px before the section comes into view
-      }
-    )
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current)
-      }
-    }
-  }, [hasLoaded])
-
-  const fetchTestimonials = async () => {
-    try {
-      const response = await fetch('/testimonials.json')
-      const data = await response.json()
-      // Shuffle the testimonials array for random order
-      const shuffledTestimonials = [...data].sort(() => Math.random() - 0.5)
-      setTestimonials(shuffledTestimonials)
-    } catch (error) {
-      console.error('Error loading testimonials:', error)
-    } finally {
-      setIsLoading(false)
-    }
-  }
 
   // Auto-cycle testimonials every 10 seconds
   useEffect(() => {
@@ -70,47 +26,6 @@ const TestimonialsSection = () => {
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
   }
 
-  // Show placeholder section before testimonials are loaded
-  if (!hasLoaded) {
-    return (
-      <section id="testimonials" className="testimonials-section" ref={sectionRef}>
-        <div className="testimonials-container">
-          <div className="testimonials-header">
-            <h2 className="testimonials-title">
-              What Other Admins Think
-            </h2>
-            <p className="testimonials-subtitle">
-              Testimonials from IT admins successfully using the OpenIntuneBaseline
-            </p>
-          </div>
-          <div className="testimonial-card">
-            <div className="testimonials-loading">Loading testimonials...</div>
-          </div>
-        </div>
-      </section>
-    )
-  }
-
-  if (isLoading) {
-    return (
-      <section id="testimonials" className="testimonials-section" ref={sectionRef}>
-        <div className="testimonials-container">
-          <div className="testimonials-header">
-            <h2 className="testimonials-title">
-              What Other Admins Think
-            </h2>
-            <p className="testimonials-subtitle">
-              Testimonials from IT admins successfully using the OpenIntuneBaseline
-            </p>
-          </div>
-          <div className="testimonial-card">
-            <div className="testimonials-loading">Loading testimonials...</div>
-          </div>
-        </div>
-      </section>
-    )
-  }
-
   if (testimonials.length === 0) {
     return null // Don't render if no testimonials
   }
@@ -118,7 +33,7 @@ const TestimonialsSection = () => {
   const currentTestimonial = testimonials[currentIndex]
 
   return (
-    <section id="testimonials" className="testimonials-section" ref={sectionRef}>
+    <section id="testimonials" className="testimonials-section">
       <div className="testimonials-container">
         <div className="testimonials-header">
           <h2 className="testimonials-title">

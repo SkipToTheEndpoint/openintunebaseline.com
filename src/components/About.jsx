@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Github, ExternalLink, Users, Star, Loader2, PackageOpen, GitFork, Eye } from 'lucide-react'
+import { Github, Star, Loader2, PackageOpen, GitFork, Eye } from 'lucide-react'
 import './About.css'
 
 const About = () => {

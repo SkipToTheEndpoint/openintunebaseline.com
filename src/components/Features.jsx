@@ -1,5 +1,5 @@
 import React from 'react'
-import { Shield, Users, Zap, FileText, Settings, CheckCircle, UserCheck, BookOpenCheck, CheckCircle2 } from 'lucide-react'
+import { Shield, Zap, Settings, CheckCircle, UserCheck, BookOpenCheck } from 'lucide-react'
 import './Features.css'
 
 const Features = () => {

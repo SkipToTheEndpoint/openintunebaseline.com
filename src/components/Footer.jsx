@@ -1,5 +1,5 @@
 import React from 'react'
-import { Github, ExternalLink, Heart, Newspaper, Twitter } from 'lucide-react'
+import { Github, Heart, Newspaper } from 'lucide-react'
 import './Footer.css'
 
 const Footer = () => {
